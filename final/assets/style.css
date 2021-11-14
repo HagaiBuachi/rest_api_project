@@ -1,0 +1,17 @@
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+.wrapper{
+max-width: 960px;
+}
+div.wrapper h1{
+text-align:center
+margin:100px auto;
+font-size; 2.4em;
+}
+
+
+body{
+color:white;
+background-image: url('black.jpg');
+}

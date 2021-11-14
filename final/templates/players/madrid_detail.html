@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<div class="players">
+    <div class="players">
+        <h2>{{players.name}}</h2>
+<img src="{{ players.image.url }}" width="250px" height="400" style="display: inline-block;" >
+        <p>{{players.bio}}</p>
+        <p><span style="color: red;"> {{players.position}}</span></p>
+    </div>
+</div>
+{% endblock %}
