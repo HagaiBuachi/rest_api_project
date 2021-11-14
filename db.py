@@ -1,18 +1,11 @@
 import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password="Hagai1234Buachi",
-    database="project1"
+    user="DATABASE_USER",
+    password="DATABASE_PASS",
+    database="DATABASE_NAME"
 )
-#mycursor = mydb.cursor()
-#mycursor.execute("CREATE TABLE workers (EMPLOYEE_ID INT (10),FIRST_NAME VARCHAR(300),\
-#LAST_NAME VARCHAR(300), EMAIL VARCHAR(300), PHONE_NUMBER VARCHAR(50),\
-#HIRE_DATE VARCHAR(40), JOB_ID VARCHAR(50), SALARY INT(30),\
- #MANAGER_ID INT(10), DEPARTMENT_ID INT(30))")
-#mycursor.execute("SHOW TABLES")
-#for tb in mycursor:
-    #print(tb)
+
 
 mycursor = mydb.cursor()
 sqlformula = "INSERT INTO workers (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE , JOB_ID, SALARY, MANAGER_ID, DEPARTMENT_ID) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"

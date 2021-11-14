@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+env = environ.Env()
+environ.Env.read_env()
+SECRET_KEY = env("SECRET_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,7 +26,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)=!03t%g&(k-^*z&0tk!3&o5vyzz&cv300#!u5hz*a@#fl#$6g'
+SECRET_KEY = 'h^z13$qr_s_wd65@gnj7a=xs7t05$w7q8!x_8zsld#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
          'HOST': "localhost",
-         'USER': "root",
-         'PASSWORD': "Hagai1234Buachi",
-         'NAME': "project1",
+         'USER': env("DATABASE_USER"),
+         'PASSWORD': env("DATABASE_PASS"),
+         'NAME': env("DATABASE_NAME"),
          'PORT': '3306'
 
     }
