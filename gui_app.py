@@ -7,9 +7,9 @@ from dateutil import relativedelta
 import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
-    user="DATABASE_USER",
-    password="DATABASE_PASS",
-    database="DATABASE_NAME"
+    user="root",
+    password="Hagai1234Buachi",
+    database="project1"
 )
 
 
